@@ -1,0 +1,9 @@
+---
+- name: Install nginx
+  hosts: all
+  become: true
+
+  tasks:
+  - name: shell command
+    shell:
+     echo date
