@@ -10,14 +10,12 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
-                
-                
-                
-    stage('Deploy') {
+                echo 'Testing. 
+            }
+        }
+          stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                sh 'mvn deploy'
             }
         }
     }
