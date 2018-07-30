@@ -5,14 +5,14 @@ pipeline {
         stage('compile stage')
         {
             steps {
-                echo 'Building..'
-                withMaven(Maven:'localMaven')
+                   withMaven(Maven:'localMaven')
                    {
                     sh 'mvn test compile'
                    }
                     
                  }
         }
+        
         stage('Test') {
             steps {
                 echo 'Testing. '
