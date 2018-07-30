@@ -5,16 +5,19 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                sh 'mvn compile'
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
+                sh 'mvn test'
+                
+                
+    stage('Deploy') {
             steps {
                 echo 'Deploying....'
+                sh 'mvn deploy'
             }
         }
     }
